@@ -7,6 +7,13 @@
 
 	Looks best in Sublime Text 3.
 
-NEED HELP ?
+#NEED HELP ?
 
-Instagram : @d.vlpr
+	Instagram : @d.vlpr
+
+#How To Use?
+
+	Open the text file in Sublime Text 3 (Or any text editor).
+	Change the syntax to Python.
+
+
