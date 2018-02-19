@@ -4,12 +4,12 @@
 	These notes will be updated.
 	Looks best in Sublime Text 3.
 
-#How To Use?
+How To Use?
 
 	Open the text file in Sublime Text 3 (Or any text editor).
 	Change the syntax to Python.
 	
-#NEED HELP ?
+Need Help ?
 
 	Instagram : @d.vlpr	
 
