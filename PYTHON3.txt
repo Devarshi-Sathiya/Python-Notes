@@ -1,0 +1,241 @@
+Loops
+
+=============================================================
+
+For Loop 
+
+	Syntax:
+
+		for Variable in range(StartingValue,EndingValue):
+			Statement
+
+	Syntax:(for; List,Dictionary or Tuple)		
+
+		for Variable in List_or_Dictionary_or_Tuple_Variable:
+	
+
+	Example:
+
+		for i in range(0,5):
+			print(i)
+			
+		0
+		1
+		2
+		3
+		4  
+
+	Example:
+
+		i =4
+		for i in range(5,10):
+			print(i)
+
+		5
+		6
+		7
+		8
+		9
+
+	Example:
+
+		i = 2
+		for i in range(1,5):
+			print(i)
+
+		1
+		2
+		3
+		4	
+
+	Example:
+
+		shoppingList=["Milk","Oranges","cheese"]
+
+		for i in shoppingList:
+			print(i)
+	
+		Milk
+		Eggs
+		Oranges
+
+	Example:
+
+		tup=(2,43,5)
+
+		for i in tup:
+			print(i)
+	
+		2
+		43
+		5
+
+	Syntax:
+	
+		for Variable in range(StratingValue,EndingValue+1,Increamentator):	
+
+		increamenttator can be negative also.
+
+	Example:(To print even numbers between 0 to 25)
+		
+		for i in range(0,25,2):
+			print(i)
+
+		0
+		2
+		4
+		6
+		8
+		10
+		12
+		14
+		16
+		18
+		20
+		22
+		24	
+
+	Example:(To print 1 to 10 in reverse)
+		
+		for i in range(10,0,-1):
+			print(i)
+ 
+
+		10
+		9
+		8
+		7
+		6
+		5
+		4
+		3
+		2
+		1
+
+=============================================================
+
+While Loop 		
+
+	Syntax:
+
+		while Condition:	
+			Statement
+
+	Example:
+
+		counter = 5
+
+		while counter < 10:
+			print(counter)
+			counter = counter + 1 		
+
+=============================================================
+
+Nested For Loop		
+	
+	Example:
+
+		for i in range(0,5):
+			for a in range(0,5):	
+				print(a)
+		
+	Example:(Prime number generator)			
+
+		for i range(2,30):
+			j = 2
+			counter = 0
+			while j < i:
+				if i % j == 0:
+					counter = 1
+					j=j+1
+				else:
+					j=j+1	
+			if counter  == 0:
+				print(str(i) + "is a prime number")
+			else:
+				counter = 0
+			 			
+=============================================================
+
+Loop Control Statements (Break, Pass, Continue)
+
+	Break: 
+
+		Terminates the loop statement and transfers the execution to whatever is next.
+
+		Example:
+		
+			while counter < 100:
+				if counter == 4:
+					break
+				else:	
+					print(counter)
+					counter = counter + 1
+
+			0
+			1
+			2
+			3		
+
+	Pass:	
+
+		Pass it along. A filler statement
+
+		Example:
+
+			if Condition:
+				Statement
+			else:	
+				pass
+
+	Continue:
+
+		Rejects all the rtemaining statements in your loop and moves the control to whereever you want it.
+
+		Example:
+
+			for i in "Python":  #i will be assigned to every letter of the string
+				if i == "h":
+					coninue
+				print(i)	
+
+			P
+			y
+			t
+			o
+			n	
+
+		Example:
+			
+			for i in range(0,5):
+				if i < 2 :
+					continue
+				print(i)
+
+				2
+				3
+				4
+				
+=============================================================
+
+Try and Except
+
+	Incase an error occurs in try then it goes to except and performs the actions described in it.
+
+	Example:
+
+		try:
+			if name>3:
+				print("Hi")
+
+		except:
+			print("Please check your code")		
+
+		Please check your code	
+
+
+
+
+
+
+

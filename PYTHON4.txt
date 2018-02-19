@@ -1,0 +1,65 @@
+Few Basics
+
+-->	Suppose we take 
+
+		string = "hello"
+
+	then in all the code we have to use double quotation for defining the srings.
+	
+	In python the strings also can be declared by single quotaion.
+
+		String = 'hello'	
+
+	But whatever syntax you use, you have to follow it for all the program.	
+
+-->	Another tricky point is when we define a string like this 
+
+		string = " It's a nice day! "
+
+	Why it didn't throw any error? It is using single quote in the double quoted statement.
+
+	It didn't thrown any error due to the starting double quotes matched the ending double quotes.
+
+	However if we define a string like 
+
+		string = 'It's a nice day!'
+	
+	then we will get syntax error 
+
+	to solve this just put a backslash
+
+		string = 'It\'s a nice day!'
+
+	known as escape character.
+
+-->  Multi line statements: 
+	
+		if mynameisdevarshi == mynameispumpkin:
+			Statement
+
+	Instead of the above lines we can saparate it into multiple lines using backslashes 
+	
+		if mynameisdevarshi\
+		==\
+		mynameispumpkin:
+			Statement
+
+	This is just for ease of view nothing else.
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

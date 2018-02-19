@@ -1,0 +1,302 @@
+#Basics of classes
+
+>>> class Students:
+	def __init__(self,name,age,grade): #function and its parameters
+		self.name=name 		#attribute
+		self.age=age   		#attribute
+		self.grade=grade	#attribute
+
+>>> student1 = Students("Bob",12,"7th") #instance of the class
+>>> student1.name
+'Bob'
+>>> student1.age
+12
+>>> student1.grade
+'7th'
+>>> student2=Students("Devarshi",20)
+#Traceback (most recent call last):
+#  File "<pyshell#28>", line 1, in <module>
+#    student2=Students("Devarshi",20)
+#TypeError: __init__() missing 1 required positional argument: 'grade'
+
+>>> class Students:
+	def __init__(self,name,age,grade):
+		pass
+
+	
+>>> student1=Students("Bob",12,"7th")
+>>> student1.name
+#Traceback (most recent call last):
+#  File "<pyshell#34>", line 1, in <module>
+#    student1.name
+#AttributeError: 'Students' object has no attribute 'name'
+
+###################################################################
+
+#Functions in Classes
+
+>>> class Students:
+	def __init__(self,name,age):
+		self.name = name
+		self.age = age
+
+		
+>>> class Students:
+	def __init__(self,name,age):
+		self.name = name
+		self.age = age
+	def displayStudent(self):
+		return("Student name is "+self.name+" and age is " + str(self.age))
+
+	
+>>> stu = Students("Bob",15)
+>>> stu.displayStudent()
+'Student name is Bob and age is 15'
+
+##########################################################################
+
+#function attributes
+
+>>> class Students:
+	def __init__(self,name,age):
+		self.name=name
+		self.age=age
+
+#hasattr is used to check the attribute
+>>> student1=Students("Fred",17)
+>>> student2=Students("Mike",12)
+>>> hasattr(student1,"age")
+True
+>>> hasattr(student1,"grade")
+False
+
+#setattr is used to set specific attribute
+>>> setattr(student1,'grade',"8th")
+>>> hasattr(student1,"grade")
+True
+
+#getattr is used to fetch the value of an attribute
+>>> getattr(student1,"grade")
+'8th'
+>>> getattr(student2,"age")
+12
+
+#delattr is used to delete an attribute
+>>> delattr(student1,"grade")
+>>> hasattr(student1,"grade")
+False
+
+###########################################################################
+
+#Inheritance
+
+>>> class Parent:
+	counter = 10
+	def __init__(self):
+		print("Class initialized.")
+	def parentFunc(self):
+		print("ParentFunc being called")
+	def setCounter(self,num):
+		Parent.counter = num
+	def showCounter(self):
+		print(str(Parent.counter))
+
+		
+>>> class Child(Parent):
+	def __init__(self):
+		print("Child class being initialized")
+	def childFunc(self):
+		print("Child func being called")
+
+		
+>>> c = Child()
+Child class being initialized
+>>> c.childFunc()
+Child func being called
+>>> c.parentFunc()
+ParentFunc being called
+>>> c.counter
+10
+>>> c.setCounter(20)
+>>> c.showCounter()
+20
+>>> c.counter
+20
+
+################################################################################
+
+#Overriding Methods
+>>> class Partent:
+	def func(self):
+		print("This is a parent function")
+
+		
+>>> class Child:
+	def func(self):
+		print("This is a child function")
+
+		
+>>> c = Child()
+>>> c.func()
+This is a child function
+
+################################################################################
+
+#Creating Files
+
+#create a test file (testfile.txt)
+#hello my name is devarshi sathiya.
+#I love python.
+#Linux is fantastic.
+
+################################################################################
+
+#Opening Files
+#file1 = open("filename","access method")
+#File access modes
+"""
+
+    r
+
+        Opens a file for reading only. The file pointer is placed at the beginning of the file. This is the default mode.
+
+    rb
+
+        Opens a file for reading only in binary format. The file pointer is placed at the beginning of the file. This is the default mode.
+
+    r+
+
+        Opens a file for both reading and writing. The file pointer will be at the beginning of the file.
+
+    rb+
+
+        Opens a file for both reading and writing in binary format. The file pointer will be at the beginning of the file.
+
+    w
+
+        Opens a file for writing only. Overwrites the file if the file exists. If the file does not exist, creates a new file for writing.
+
+    wb
+
+        Opens a file for writing only in binary format. Overwrites the file if the file exists. If the file does not exist, creates a new file for writing.
+
+    w+
+
+        Opens a file for both writing and reading. Overwrites the existing file if the file exists. If the file does not exist, creates a new file for reading and writing.
+
+    wb+
+
+        Opens a file for both writing and reading in binary format. Overwrites the existing file if the file exists. If the file does not exist, creates a new file for reading and writing.
+
+    a
+
+        Opens a file for appending. The file pointer is at the end of the file if the file exists. That is, the file is in the append mode. If the file does not exist, it creates a new file for writing.
+
+    ab
+
+        Opens a file for appending in binary format. The file pointer is at the end of the file if the file exists. That is, the file is in the append mode. If the file does not exist, it creates a new file for writing.
+
+    a+
+
+        Opens a file for both appending and reading. The file pointer is at the end of the file if the file exists. The file opens in the append mode. If the file does not exist, it creates a new file for reading and writing.
+
+    ab+
+
+        Opens a file for both appending and reading in binary format. The file pointer is at the end of the file if the file exists. The file opens in the append mode. If the file does not exist, it creates a new file for reading and writing.
+
+
+"""
+
+>>> file1=open(r"C:\Users\Devarshi\Desktop\testfile.txt","r")
+>>> #read
+>>> file1.read()
+'hello my name is devarshi sathiya.\nI love python.\nLinux is fantastic.'
+>>> file1.read()
+''
+>>> #happened because of the cursor.cursor moved to the end of the file due to read operation.
+>>> #so there's nothing left to read from the file
+>>> #solution :
+>>> file1.tell()
+71
+>>> #this shows thatat which position the cursor is. 71 is the last postion in our text file  testfile.txt
+>>> position = file1.seek(0,0)
+>>> file1.read()
+'hello my name is devarshi sathiya.\nI love python.\nLinux is fantastic.'
+>>> file1.seek(0,0)
+0
+>>> file1.read()
+'hello my name is devarshi sathiya.\nI love python.\nLinux is fantastic.'
+>>> file1.seek(0,0)
+0
+>>>#reading a file till a specific charectors
+>>> file1.read(20)
+'hello my name is dev'
+>>> file1.read(20)
+'arshi sathiya.\nI lov'
+
+################################################################################
+
+#Writing to files
+>>> file1 = open(r"C:\Users\Devarshi\Desktop\testfile.txt","w")
+#>>> file1.read()
+#Traceback (most recent call last):
+#  File "<pyshell#33>", line 1, in <module>
+#    file1.read()
+#io.UnsupportedOperation: not readable
+>>> file1.write("I have entered some text into this file \n let's see if this works")
+65
+>>> file1.close()
+>>> file1 = open(r"C:\Users\Devarshi\Desktop\testfile.txt","r")
+>>> file1.read()
+"I have entered some text into this file \n let's see if this works"
+
+################################################################################
+
+#Appending to files (adding text to the file.)
+
+>>> f=open(r"C:\Users\Devarshi\Desktop\test.txt","a")
+>>> f.write("\n This is the appending text to test")
+36
+>>> f.close()
+>>> f=open(r"C:\Users\Devarshi\Desktop\test.txt","r")
+>>> f.read()
+'hello my name is devarshi sathiya.\nI love python.  \nLinux is fantastic.\n This is the appending text to test'
+
+
+>>> f=open(r"C:\Users\Devarshi\Desktop\test.txt","a+") #open in apend + read mode
+>>> f.write("\n This is the appending text to test second time")
+48
+>>> f.read()
+''
+>>> f.seek(0,0)
+0
+>>> f.read()
+'hello my name is devarshi sathiya.\nI love python.  \nLinux is fantastic.\n This is the appending text to test\n This is the appending text to test second time'
+
+################################################################################
+
+#Copying to files 
+
+>>> ufn = input("Enter your file name : ")
+Enter your file name : C:\Users\Devarshi\Desktop\test.txt
+>>> file1 = open(ufn,"r")
+
+"""
+>>> file1.read()
+'hello my name is devarshi sathiya.\nI love python.  \nLinux is fantastic.\n This is the appending text to test\n This is the appending text to test second time'
+>>> file1.seek(0,0)
+0
+"""
+>>> file2 = open(r"C:\Users\Devarshi\Desktop\testcopy.txt","w")
+>>> file2.write(file1.read())
+155
+
+>>> file1.close()
+>>> file2.close()
+
+>>> file2 = open(r"C:\Users\Devarshi\Desktop\testcopy.txt","r")
+>>> file2.read()
+'hello my name is devarshi sathiya.\nI love python.  \nLinux is fantastic.\n This is the appending text to test\n This is the appending text to test second time'
+
+################################################################################
+

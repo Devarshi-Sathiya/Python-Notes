@@ -1,0 +1,140 @@
+#Abs and Bool
+#Abs returns the absolute value of a number.
+
+abs(-43)
+#43
+abs(2)
+#2
+abs(43.5)
+#43.5
+
+#bool stands for boolean.
+bool(0)
+#False 
+bool(None)
+#False 
+bool(1)
+#True
+bool(45)
+#True
+bool("asd")
+#True
+
+###################################
+
+#Help and Dir
+
+#Dir shows every function that can be used with anything for example say list
+
+dir(["Orange"])
+#['__add__', '__class__', '__contains__', '__delattr__', '__delitem__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__getitem__', '__gt__', '__hash__', '__iadd__', '__imul__', '__init__', '__init_subclass__', '__iter__', '__le__', '__len__', '__lt__', '__mul__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__reversed__', '__rmul__', '__setattr__', '__setitem__', '__sizeof__', '__str__', '__subclasshook__', 'append', 'clear', 'copy', 'count', 'extend', 'index', 'insert', 'pop', 'remove', 'reverse', 'sort']
+
+tiger="I am a Tiger"
+dir(tiger)
+#['__add__', '__class__', '__contains__', '__delattr__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__getitem__', '__getnewargs__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__iter__', '__le__', '__len__', '__lt__', '__mod__', '__mul__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__rmod__', '__rmul__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', 'capitalize', 'casefold', 'center', 'count', 'encode', 'endswith', 'expandtabs', 'find', 'format', 'format_map', 'index', 'isalnum', 'isalpha', 'isdecimal', 'isdigit', 'isidentifier', 'islower', 'isnumeric', 'isprintable', 'isspace', 'istitle', 'isupper', 'join', 'ljust', 'lower', 'lstrip', 'maketrans', 'partition', 'replace', 'rfind', 'rindex', 'rjust', 'rpartition', 'rsplit', 'rstrip', 'split', 'splitlines', 'startswith', 'strip', 'swapcase', 'title', 'translate', 'upper', 'zfill']
+
+help(tiger.upper)
+"""
+Help on built-in function upper:
+
+upper(...) method of builtins.str instance
+    S.upper() -> str
+    
+    Return a copy of S converted to uppercase.
+"""
+
+help(tiger.replace)
+"""
+Help on built-in function replace:
+
+replace(...) method of builtins.str instance
+    S.replace(old, new[, count]) -> str
+    
+    Return a copy of S with all occurrences of substring
+    old replaced by new.  If the optional argument count is
+    given, only the first count occurrences are replaced.
+"""
+##################################
+
+#Eval and Exec
+
+#Eval statement can evaluate some simple pyhton expressions. You can't do multiline statements using it.
+
+eval("print('hello')")
+#hello
+eval("23*5")
+#115
+
+#exec stands for execute.
+#it is same as eval but it can handle more complecated programs.
+
+program='''print("hey there")
+print("my name is devarshi")
+'''
+"""
+>>>exec(program)
+hey there
+my name is devarshi
+>>>eval(program) will give an error
+"""
+
+#################################
+
+#Int(),Str(),Float()
+
+input("Enter your age:")
+"""
+Enter your age: 14
+'14'
+"""
+age=input("Ener your age:")
+"""
+Enter your age: 14
+>>>age
+'14'
+"""
+if age > 13:
+	print("Elligible for fb")
+
+"""
+Traceback (most recent call last):
+  File "<pyshell#20>", line 1, in <module>
+    if age> 13:
+TypeError: '>' not supported between instances of 'str' and 'int'
+"""	
+
+if int(age)>13:
+	print("elligible for fb")
+
+#Elligible for fb
+
+str(age)
+#this will convert the age which is in int into string.
+#we can interchane these ie. int() <> float() <> string()
+
+#####################
+
+#sum()
+
+list1=[23,25,30]
+"""
+>>>sum(list1)
+78
+"""
+
+#######################
+
+#RECAP
+
+>>> len([23,25,30])
+3
+>>> len("devarshi")
+8
+>>> array=['a','b','c']
+>>> max(array)
+'c'
+>>> array=['a','b','c','A','D']
+>>> min (array)
+'A'
+
+#########################

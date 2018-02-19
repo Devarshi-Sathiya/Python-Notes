@@ -1,0 +1,136 @@
+Conditional Statement - If/Else
+
+	Syntax: 
+
+		if Condition:
+			#statement
+		else:	
+			#statement
+
+	Example: 
+		
+		if 5>2:
+			print("my name is Devarshi")
+		else:
+			print("We are in parallel universe!")	
+		
+==============================================================
+
+Relational Operators
+	
+	Seven relationals operators in python 
+
+	1. ==
+	2. != 
+	3. <> #showed me a syntax error
+	4. >
+	5. <
+	6. >=
+	7. <=
+
+	(2 and 3 have the same use)
+
+	Example:
+
+		>>> 6>3
+		True
+		>>> 3<7
+		True
+		>>> 5>=6
+		False
+		>>> 4<=4
+		True
+		>>> 5!=4
+		True
+
+==============================================================
+
+Nested If/Else
+
+	Syntax:
+
+		if condition:
+			if condition:
+				Statement
+			else
+				Statement	
+
+
+	Example:	
+
+		age = 13
+		name = Bob 
+
+		if age>13:
+			if name == "Bob" : 			
+				print("You have special privilages")
+			else:
+				print("You are elligible for facebook")	
+
+	#spacing do matter in Python if the upper else statement was wrote like 		
+
+		else:
+		print("You are elligible for facebook")	
+
+	then this will throw an error. 		
+
+=============================================================
+
+Elif (Else/If)
+	
+	Syntax:
+
+		if condition:
+			Statement
+		elif condition:	
+			Statement
+		else:
+			Statement	
+
+	Example :
+		
+		day = "Tuesday"
+		
+		if day == "Monday":
+			print("Sunny!")
+		elif day == "Tuesday":
+			print("Cloudy!") 	
+		else:
+			print("Rainy")	
+
+=============================================================
+
+Logical Operators
+	
+	And & Or
+
+
+	Syntax:
+	
+		if condition and condition:
+			Statement
+	
+	Example:
+	
+		name = "Dev" 		
+		age = 20
+
+		if age>19 and name=="Dev":
+			print("Hey Dev")
+
+	Syntax:
+		if condition or condition:
+			Statement
+
+	Example:	
+
+		name = "Bob"
+		age = 20
+
+		if age>19 or name == "Dev":
+			print("Hello")
+
+=============================================================
+
+
+

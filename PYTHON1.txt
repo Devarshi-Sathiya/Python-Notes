@@ -1,0 +1,348 @@
+===================================
+printing Hello world : 
+
+	print("Hello World")
+===================================
+
+Variables : 
+
+	varName = 12
+
+	age=14
+
+		if you just enter the name of the variable than the IDLE will give the value of the variable
+
+	age=15 
+
+		this will change the value of the variable
+
+	Python keywords will not be assigned as variables
+
+============================================================
+
+Multiple Assignment (Declaration)
+
+	person1,person2,person3="Abby","James","Lebron"
+
+	var1=var2=var3=apples 
+
+==============================================================
+
+Data types and Ints 
+	
+	age = 10
+	varHim = 35
+	age1 = 14
+	age2 = 40
+
+	age3 = age1 + age2 
+	age3 = age1 - age2 
+	age3 = age1 / age2 
+	age3 = age1 * age2
+
+	age3 = age1 % age2 
+
+==============================================================
+
+Strings 
+
+	myName = "Devarshi"
+
+	firstName = "Dev"
+	secondName = "Sathiya"
+	fullName = firstName + secondName // DevSathiya 
+
+	fullName = firstName + "" + secondName // Dev Sathiya
+
+	=========================================================
+
+	String slice
+
+		myname = "Devarshi gibrishsdsdfsdfksdhfgsdjfhwkjd"
+		myname[10] // output 'i'
+
+		myname[0:8] // 'devarshi' // gives after one possition before ending 
+
+		myname[2:] // 'varshi gibrishsdsdfsdfksdhfgsdjfhwkjd'
+
+
+		other inbuilts : 
+
+		lstrip(),rstrip(),strip()
+		ljust(),rjust()
+
+
+=============================================================
+
+Lists (Array)
+	
+	shoppingList = ["milk","cherries","apples","Orange","bread"]
+
+	shoppingList[2] // 'apples'
+
+	==================================
+
+	to update value to a list 
+
+	shoppingList[2] = "chocolate" // ['milk', 'cherries', 'chocolate', 'Orange', 'bread']
+
+==============================================================
+
+List Functions
+	
+	Delete Function
+
+		Syntax : 
+			del ListName[item_number]
+
+		del shoppinglist2[4] // error , explained later but it will work(didn't thrown in mine)
+
+	================================================	
+
+	Len Function 
+
+		to get number of objects in the list
+
+		Syntax 
+			len(Arrayname)
+
+	================================================		
+
+	Min-Max Function
+
+		used to get maximum and minimum value from the array
+
+		Syntax :
+
+			max(ArrayName)
+			min(ArrayName)
+
+	================================================		
+
+	Append Function 
+		
+		used to add an object to a list 
+
+		Syntax: 
+
+			ArrayName.append("Object");
+
+		Example 
+
+			shoppinglist.append("Butter") 	
+
+	================================================		
+
+	Count Function
+			
+		to count number of times a object is repeating in the array 
+
+		Syntax:
+			
+			ArrayName.count("Object")
+
+		Example:
+		
+			shoppingList.count("chocolate")	
+
+=============================================================
+
+----------------------------------------------------------
+Addition of array 
+
+array1=[21,23,24]
+array2=[31,32]	
+
+array3=array1+array2 // now array3 = [21,23,24,31,32]
+-------------------------------------------------------------
+
+=============================================================
+
+Dictionary 
+
+	Syntax:
+		
+		Name={"Key":value,"Key2":value2,...}
+	
+	Example: 
+
+		students={"Eric":14,"Bob":12,"Tina":26}
+		Students["Bob"]
+		//12
+
+	Updtating a value 	
+		
+		Students["Bob"]=13		
+
+	Deleting a key and value
+	
+		del students["Bob"]
+
+=============================================================
+
+Functions in Dictionary
+
+	Dictionary are unordered i.e. it is not indexing any number to the objects they are completely random.
+
+	students={"Jobs":15,"Mark":16,"Avi":17}
+	
+	======================================
+	
+	Delete all the Keys and Value 
+		
+		Syntax: 
+
+			DictionaryName.clear()
+
+		Example:
+
+			students.clear()
+
+	=========================================
+
+	Deleting a Dictiory 		
+
+		Syntax:
+
+			del DictionaryName 	
+
+		Example:
+
+			del students 
+
+	=========================================
+
+	Len 
+
+		number of Key-value pairs 
+
+			Syntax
+
+				len(DictioryName)
+
+			Example
+			
+				len(students) 
+
+		=======================================
+
+		Name of keys in the dictionary 
+
+			Syntax:
+
+				DictionaryName.keys()
+
+			Example:	
+
+				students.keys()
+
+		=======================================		
+
+		Values in the dictionary 
+
+			Syntax:
+
+				DictionaryName.values()
+
+			Example:
+
+				students.values()
+
+		========================================		
+
+	=======================================================	
+
+	students={"Jobs":15,"Mark":16,"Avi":17}
+	students2={"Job":15,"Mar":16,"Av":17}		
+
+	=======================================================		
+	Update Function
+		
+		to updating one dictionary to another
+		
+		Syntax:
+
+			DictionaryName.update(DictionaryName2)
+
+		Example:
+		
+			students.update(students2)	
+			
+			/* output :
+
+			>>> students
+			{'Jobs': 15, 'Mark': 16, 'Avi': 17, 'Job': 15, 'Mar': 16, 'Av': 17}
+			
+			*/
+
+	=======================================================	
+
+=============================================================		
+
+Tuples 
+
+	Tuples and list are both same. But the data in the tuples can not be changed, means that tuples are immutable.
+
+	Tuple variable can be override. 
+
+		Syntax:
+
+			variableName = ("value","value2",....)
+
+		Example:
+
+			tup1 = ("Maths",23,"dogs")
+
+			//tup1.append("Phy") //error 
+			//del tup1["Maths"] // error 
+
+			now if we write 
+
+			tup1 = ("Cheese")
+
+			the variable tup1 will be assigned value "Cheese"
+
+	=========================================================	 	
+	Some slicing function are same as lists 
+
+		Example: 
+		
+			>>> tup1 = ("Maths",23,"Dogs")
+			>>> tup1[0]
+			'Maths'
+			>>> tup1[1]
+			23
+			>>> tup1[0:2]
+			('Maths', 23)
+	
+	=========================================================
+
+	Deleting a tuple 
+
+		Syntax:
+
+			del TupleName
+
+		Example:
+			
+			del tup1
+
+=============================================================			 		
+Commenting
+
+	Single line	Commenting is done by '#' character.
+
+	Multiline commenting is done with triple quotation mark i.e. """ and ends with the same 
+	 
+
+
+
+
+
+
+
+
+
+
+
+

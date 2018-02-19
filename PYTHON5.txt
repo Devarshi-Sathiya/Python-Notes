@@ -1,0 +1,51 @@
+#function
+def functionName():
+	for i in range(0,5):
+		print("hi")
+
+"""
+>>>functionName()
+hi
+hi
+hi
+hi
+hi
+"""		
+################################
+
+def addNum(firstNum,secondNum):
+	return(firstNum,secondNum)
+"""
+>>>addNum(45,3)
+48
+"""
+#################################	
+
+#Global and Local Variables
+
+total = 10
+def multiply(num1,num2):
+	total=num1*num2
+	return total
+"""
+>>>multiply(20,30)
+600
+>>>total
+10
+"""
+#total is global variable while the total declared in multiply function is local for it.
+
+def multiply(num1,num2):
+	totall=num1*num2
+	return totall
+"""
+>>>multiply(20,30)
+600
+>>>totall
+Traceback (most recent call last):
+  File "<pyshell#5>", line 1, in <module>
+    total
+NameError: name 'totall' is not defined
+"""
+
+
